@@ -6,32 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TenserFlow.js in Browser</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
     <div class="container pt-4">
         <div class="row mb-4">
             <div class="col-6">
-                <input id='img-file' type="file" placeholder="Upload image">
+                <input id='imgFile' type="file" placeholder="Upload image">
             </div>
             <div class="col-6">
-                <button type="button" class="btn btn-primary">Predict</button>
+                <button id='predictBtn' type="button" class="btn btn-primary" disabled>Predict</button>
             </div>
         </div>
 
-        <div class="row mb-4">
-            <div class="col">
-                <h2>Predictions</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Prediction item</li>
-                </ul>
-            </div>
-        </div>
+        <!-- <div class="progress">
+            <div class="progress-bar" style="width:70%"></div>
+        </div> -->
 
-        <div class="row">
-            <div class="col">
-                <h2>Image</h2>
-                <img id='img' src="./img/chair.jpg" alt="">
+        <div id='predictionResult' class='prediction-result'>
+            <div class="row mb-4">
+                <div class="col">
+                    <h2>Predictions</h2>
+                    <ul id='predictList' class="list-group"></ul>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-6">
+                    <h2>Image</h2>
+                    <img id='selectedImg' class="rounded" src="" alt="">
+                </div>
             </div>
         </div>
     </div>
