@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TenserFlow.js in Browser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container pt-4">
+        <div class="row mb-4">
+            <div class="col-6">
+                <input id='img-file' type="file" placeholder="Upload image">
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-primary">Predict</button>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col">
+                <h2>Predictions</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Prediction item</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2>Image</h2>
+                <img id='img' src="./img/chair.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1/dist/tf.min.js"></script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.1.1"> </script>
+    <!-- Sketch script -->
+    <script src="./sketch.js"></script>
+</body>
+</html>
